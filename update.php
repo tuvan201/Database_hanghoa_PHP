@@ -56,7 +56,6 @@ isset($_GET["check_img"]) ? $check_img="" :$check_img="<br>tên file cũ:$result
 			}
 			
 		}
-		//Nếu người dùng upload file ảnh mới là file ảnh(false)
 		else
 		{
 			//Nếu người dùng giữ nguyên ảnh và ấn submit

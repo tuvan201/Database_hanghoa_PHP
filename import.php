@@ -19,7 +19,6 @@ function insertTableHangHoa($mahang,$tenhang,$dongia,$soluong,$dvt,$hinhanh){
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)==0)
     {
-     //thỏa mãn thì insert
      $sql= "INSERT INTO `hanghoa`(`Mahang`, `Tenhang`, `Dongia`, `Soluong`, `DVT`, `Anh`)
       VALUES ('$mahang','$tenhang','$dongia','$soluong','$dvt','$hinhanh')";
      mysqli_query($conn,$sql);

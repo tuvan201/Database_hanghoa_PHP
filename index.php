@@ -2,11 +2,11 @@
 include"import.php";
 $tenhang="";
 ?>
-<a href="insert_Item.php">THÊM</a>
-<a href=""><br>HIỂN THỊ TẤT CẢ</a>
 <?php
+$select_all="";
 if(isset($_POST["submit_sreach"]) and !empty($_POST["sreach_item"]))
 {
+$select_all="HIỂN THỊ TẤT CẢ";
 $tenhang=$_POST["sreach_item"];
 $sql_query="SELECT * FROM hanghoa WHERE Tenhang='$tenhang'";
 $result=mysqli_query($conn,$sql_query);
@@ -15,6 +15,8 @@ else{
     $sql_query="SELECT * FROM hanghoa";
     $result=mysqli_query($conn,$sql_query);
 }?>
+<a href="insert_Item.php">THÊM</a>
+<a href=""><br><?php echo $select_all; ?></a>
 <table border="1px" cellpadding="10" cellspacing="0">
     <caption><h2>Bảng hàng hóa</h2></caption>
     <tr>
